@@ -915,3 +915,56 @@ html {
     display: block;
   }
 }
+@media (max-width: 768px) {
+  /* Контейнер для текста */
+  .hero-content {
+    top: 20% !important;   /* Поднимаем выше */
+    padding: 0 25px !important; /* ОТСТУП ОТ КРАЯ: 25px слева и справа */
+    text-align: left !important; /* СТРОГО ПО ЛЕВОМУ КРАЮ */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-content h1 {
+    font-size: 30px !important; /* Крупный заголовок */
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-align: left !important;
+  }
+
+  .hero-subtitle {
+    font-size: 16px !important;
+    line-height: 1.5;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+    margin-bottom: 25px;
+  }
+
+  /* Кнопки в Hero */
+  .hero-btns {
+    display: flex;
+    flex-direction: column; /* Одна под другой */
+    gap: 12px;
+    padding: 0; /* Отступ уже есть у родителя (.hero-content) */
+    width: 100%;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    text-align: center; /* Текст внутри кнопки — по центру */
+    padding: 14px 20px;
+    border-radius: 12px;
+    display: block;
+  }
+}
+/* --- ТОЛЬКО ПРАВКИ ОТСТУПОВ И СТАТИСТИКИ (В КОНЕЦ ФАЙЛА) --- */
+
+/* Сдвигаем текст влево на ПК, чтобы было как на мобилке */
+@media (min-width: 769px) {
+  .hero-content {
+    margin-left: 0 !important;
+    padding-left: 50px !important; /* На ПК отступ побольше для красоты */
+    max-width: 800px !important;
+  }
+}
